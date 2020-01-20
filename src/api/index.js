@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const {
-  user: { token },
-} = localStorage.getItem('user') || {};
+const { user: { token } = {} } = localStorage.getItem('user') || {};
 
 const AuthorizationHeader = token ? { Autorization: `Bearer ${token}` } : {};
 
