@@ -1,8 +1,8 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch } from 'react-redux';
-import { Form, Input, Icon, Button } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
+import { Form, Input, Icon, Button, Alert } from 'antd';
 import { Link } from 'react-router-dom';
 import { loginAction } from '../store/actions';
 
@@ -14,6 +14,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const LoginForm = () => {
+  const { errors: errorsApi } = useSelector(state => state.errorsReducer);
   const dispatch = useDispatch();
   return (
     <Formik
@@ -67,6 +68,7 @@ const LoginForm = () => {
             </Button>
             Or <Link to="/signup">register now!</Link>
           </Form.Item>
+          {errorsApi && <Alert type="error" message={JSON.stringify(errorsApi, null, 2)} />}
         </Form>
       )}
     </Formik>

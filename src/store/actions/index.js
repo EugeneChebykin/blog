@@ -19,7 +19,7 @@ export const loginAction = user => async dispatch => {
     dispatch(loginSuccess({ user: response }));
     history.push('/home');
   } catch (err) {
-    dispatch(loginFailure(err));
+    dispatch(loginFailure(err.response.data));
   }
 };
 
@@ -30,6 +30,6 @@ export const registrAction = user => async dispatch => {
     dispatch(registrSuccess({ user: response }));
     history.push('/login');
   } catch (err) {
-    dispatch(registrFailure(err));
+    dispatch(registrFailure(err.response.data));
   }
 };

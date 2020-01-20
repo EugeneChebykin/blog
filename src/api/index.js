@@ -4,7 +4,7 @@ const { token } = localStorage.getItem('user') || {};
 const AuthorizationHeader = token ? { Autorization: `Bearer ${token}` } : {};
 
 const api = axios.create({
-  baseURL: 'http://karo-dev.ru:3000/api/',
+  baseURL: 'https://conduit.productionready.io/api/',
   headers: { ...AuthorizationHeader, 'Content-type': 'application/json' },
 });
 

@@ -21,4 +21,19 @@ const userReducer = handleActions(
   initialState
 );
 
-export default combineReducers({ userReducer });
+const errorsReducer = handleActions(
+  {
+    [actions.loginSuccess]() {
+      return {};
+    },
+    [actions.loginFailure](state, { payload: { errors } }) {
+      return { errors };
+    },
+    [actions.registrFailure](state, { payload: { errors } }) {
+      return { errors };
+    },
+  },
+  {}
+);
+
+export default combineReducers({ userReducer, errorsReducer });

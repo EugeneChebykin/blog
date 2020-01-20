@@ -1,8 +1,8 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Form, Input, Icon, Button } from 'antd';
-import { useDispatch } from 'react-redux';
+import { Form, Input, Icon, Button, Alert } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
 import { registrAction } from '../store/actions';
 
 const validationSchema = Yup.object().shape({
@@ -22,7 +22,8 @@ const validationSchema = Yup.object().shape({
     .required('Password is required'),
 });
 
-const LoginForm = () => {
+const SignUpForm = () => {
+  const { errors: errorsApi } = useSelector(state => state.errorsReducer);
   const dispatch = useDispatch();
   return (
     <Formik
@@ -89,10 +90,11 @@ const LoginForm = () => {
               Sign up
             </Button>
           </Form.Item>
+          {errorsApi && <Alert type="error" message={JSON.stringify(errorsApi, null, 2)} />}
         </Form>
       )}
     </Formik>
   );
 };
 
-export default LoginForm;
+export default SignUpForm;
