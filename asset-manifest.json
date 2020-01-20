@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/FormikAndYupForm/static/css/main.43d092ac.chunk.css",
+    "main.js": "/FormikAndYupForm/static/js/main.d0651f2c.chunk.js",
+    "main.js.map": "/FormikAndYupForm/static/js/main.d0651f2c.chunk.js.map",
+    "runtime-main.js": "/FormikAndYupForm/static/js/runtime-main.57dc1dff.js",
+    "runtime-main.js.map": "/FormikAndYupForm/static/js/runtime-main.57dc1dff.js.map",
+    "static/css/2.ff8bd605.chunk.css": "/FormikAndYupForm/static/css/2.ff8bd605.chunk.css",
+    "static/js/2.3c6c5dd3.chunk.js": "/FormikAndYupForm/static/js/2.3c6c5dd3.chunk.js",
+    "static/js/2.3c6c5dd3.chunk.js.map": "/FormikAndYupForm/static/js/2.3c6c5dd3.chunk.js.map",
+    "index.html": "/FormikAndYupForm/index.html",
+    "precache-manifest.c3aff5032099851256662dbc1d6092ad.js": "/FormikAndYupForm/precache-manifest.c3aff5032099851256662dbc1d6092ad.js",
+    "service-worker.js": "/FormikAndYupForm/service-worker.js",
+    "static/css/2.ff8bd605.chunk.css.map": "/FormikAndYupForm/static/css/2.ff8bd605.chunk.css.map",
+    "static/css/main.43d092ac.chunk.css.map": "/FormikAndYupForm/static/css/main.43d092ac.chunk.css.map",
+    "static/js/2.3c6c5dd3.chunk.js.LICENSE": "/FormikAndYupForm/static/js/2.3c6c5dd3.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57dc1dff.js",
+    "static/css/2.ff8bd605.chunk.css",
+    "static/js/2.3c6c5dd3.chunk.js",
+    "static/css/main.43d092ac.chunk.css",
+    "static/js/main.d0651f2c.chunk.js"
+  ]
+}
