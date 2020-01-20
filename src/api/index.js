@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const { user: { token } = {} } = localStorage.getItem('user') || {};
-
+const { token } = localStorage.getItem('user') || {};
 const AuthorizationHeader = token ? { Autorization: `Bearer ${token}` } : {};
 
 const api = axios.create({
