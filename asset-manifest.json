@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/FormikAndYupForm/static/css/main.43d092ac.chunk.css",
-    "main.js": "/FormikAndYupForm/static/js/main.d0651f2c.chunk.js",
-    "main.js.map": "/FormikAndYupForm/static/js/main.d0651f2c.chunk.js.map",
-    "runtime-main.js": "/FormikAndYupForm/static/js/runtime-main.57dc1dff.js",
-    "runtime-main.js.map": "/FormikAndYupForm/static/js/runtime-main.57dc1dff.js.map",
-    "static/css/2.ff8bd605.chunk.css": "/FormikAndYupForm/static/css/2.ff8bd605.chunk.css",
-    "static/js/2.3c6c5dd3.chunk.js": "/FormikAndYupForm/static/js/2.3c6c5dd3.chunk.js",
-    "static/js/2.3c6c5dd3.chunk.js.map": "/FormikAndYupForm/static/js/2.3c6c5dd3.chunk.js.map",
-    "index.html": "/FormikAndYupForm/index.html",
-    "precache-manifest.c3aff5032099851256662dbc1d6092ad.js": "/FormikAndYupForm/precache-manifest.c3aff5032099851256662dbc1d6092ad.js",
-    "service-worker.js": "/FormikAndYupForm/service-worker.js",
-    "static/css/2.ff8bd605.chunk.css.map": "/FormikAndYupForm/static/css/2.ff8bd605.chunk.css.map",
-    "static/css/main.43d092ac.chunk.css.map": "/FormikAndYupForm/static/css/main.43d092ac.chunk.css.map",
-    "static/js/2.3c6c5dd3.chunk.js.LICENSE": "/FormikAndYupForm/static/js/2.3c6c5dd3.chunk.js.LICENSE"
+    "main.css": "/blog/static/css/main.43d092ac.chunk.css",
+    "main.js": "/blog/static/js/main.0bcec930.chunk.js",
+    "main.js.map": "/blog/static/js/main.0bcec930.chunk.js.map",
+    "runtime-main.js": "/blog/static/js/runtime-main.08757fe3.js",
+    "runtime-main.js.map": "/blog/static/js/runtime-main.08757fe3.js.map",
+    "static/css/2.ff8bd605.chunk.css": "/blog/static/css/2.ff8bd605.chunk.css",
+    "static/js/2.ef35f1e6.chunk.js": "/blog/static/js/2.ef35f1e6.chunk.js",
+    "static/js/2.ef35f1e6.chunk.js.map": "/blog/static/js/2.ef35f1e6.chunk.js.map",
+    "index.html": "/blog/index.html",
+    "precache-manifest.f86cee835db0f7ad6cc770275ee4c33f.js": "/blog/precache-manifest.f86cee835db0f7ad6cc770275ee4c33f.js",
+    "service-worker.js": "/blog/service-worker.js",
+    "static/css/2.ff8bd605.chunk.css.map": "/blog/static/css/2.ff8bd605.chunk.css.map",
+    "static/css/main.43d092ac.chunk.css.map": "/blog/static/css/main.43d092ac.chunk.css.map",
+    "static/js/2.ef35f1e6.chunk.js.LICENSE": "/blog/static/js/2.ef35f1e6.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.57dc1dff.js",
+    "static/js/runtime-main.08757fe3.js",
     "static/css/2.ff8bd605.chunk.css",
-    "static/js/2.3c6c5dd3.chunk.js",
+    "static/js/2.ef35f1e6.chunk.js",
     "static/css/main.43d092ac.chunk.css",
-    "static/js/main.d0651f2c.chunk.js"
+    "static/js/main.0bcec930.chunk.js"
   ]
 }
