@@ -4,9 +4,12 @@ import { Redirect, Switch, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Layout } from 'antd';
 import Navbar from '../components/Navbar';
-import Home from '../pages/Home';
-import Login from '../pages/Login';
-import SignUp from '../pages/SignUp';
+import Home from './Home';
+import Login from './Login';
+import SignUp from './SignUp';
+import Article from './Article';
+import ArticleEdit from './ArticleEdit';
+import ArticleAdd from './ArticleAdd';
 
 const { Header, Content } = Layout;
 
@@ -26,9 +29,9 @@ ConditionalRoute.propTypes = {
 };
 
 const Routes = () => {
-  const { loggedIn } = useSelector(state => state.userReducer);
+  const { loggedIn } = useSelector(state => state.user);
   return (
-    <Layout className="layout">
+    <Layout className="layout" style={{ maxWidth: '1440px' }}>
       <Header>
         <div className="logo" />
         <Navbar />
@@ -44,8 +47,21 @@ const Routes = () => {
             pathToRedirect="/login"
             conditionFunc={() => loggedIn}
           />
+          <ConditionalRoute
+            path="/add"
+            component={ArticleAdd}
+            pathToRedirect="/login"
+            conditionFunc={() => loggedIn}
+          />
+          <ConditionalRoute
+            path="/articles/:slug/edit"
+            component={ArticleEdit}
+            pathToRedirect="/login"
+            conditionFunc={() => loggedIn}
+          />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
+          <Route exact path="/articles/:slug" component={Article} />
         </Switch>
       </Content>
     </Layout>

@@ -1,20 +1,16 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import './App.css';
 import 'antd/dist/antd.css';
 import Routes from './routes';
-import store from './store';
 import history from './history';
 
 function App() {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
-    <Provider store={store}>
-      <Router history={history}>
-        <Routes />
-      </Router>
-    </Provider>
+    <Router history={history}>
+      <Routes />
+    </Router>
   );
 }
 

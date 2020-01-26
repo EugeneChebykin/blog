@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as actions from '../store/actions';
 
 const Navbar = props => {
-  const { loggedIn } = useSelector(state => state.userReducer);
+  const { loggedIn } = useSelector(state => state.user);
   const dispatch = useDispatch();
   const { location } = props;
 
