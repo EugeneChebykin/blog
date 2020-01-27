@@ -13,7 +13,7 @@ const Article = ({ match }) => {
   const { slug } = match.params;
   const { user, article = {} } = useSelector(state => ({
     article: state.articles.articles.find(item => item.slug === slug) || {},
-    user: state.user.userData,
+    user: state.user.user,
   }));
   const { author = {} } = article;
   const formattedDate = formatDistance(new Date(article.createdAt || 0), new Date(), {

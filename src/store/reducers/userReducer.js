@@ -1,13 +1,13 @@
 import { handleActions } from 'redux-actions';
 import * as actions from '../actions';
 
-const userData = JSON.parse(localStorage.getItem('user'));
-const initialState = userData ? { loggedIn: true, userData } : { loggedIn: false };
+const user = JSON.parse(localStorage.getItem('user'));
+const initialState = user ? { loggedIn: true, user } : { loggedIn: false };
 
 const userReducer = handleActions(
   {
-    [actions.loginSuccess](state, { payload: { user } }) {
-      return { loggedIn: true, user };
+    [actions.loginSuccess](state, { payload: { userData } }) {
+      return { loggedIn: true, user: userData };
     },
     [actions.loginFailure]() {
       return { loggedIn: false };

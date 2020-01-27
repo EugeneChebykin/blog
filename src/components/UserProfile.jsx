@@ -7,10 +7,10 @@ import history from '../history';
 const { Meta } = Card;
 
 const UserProfile = () => {
-  const user = JSON.parse(localStorage.getItem('user'));
-  const { pageSize } = useSelector(state => ({
+  const { pageSize, user } = useSelector(state => ({
     pageSize: state.pageSettings.pageSize,
     params: state.articles.params,
+    user: state.user.user,
   }));
   const dispatch = useDispatch();
   return (
@@ -19,7 +19,7 @@ const UserProfile = () => {
       style={{ width: 240, marginRight: '10px' }}
       title={<Avatar size={64} icon="user" />}
     >
-      <Meta title={user.username} description="www.instagram.com" />
+      <Meta title={user.username} description={user.email} />
       <Button
         style={{ marginTop: '20px', width: '100%' }}
         type="primary"
