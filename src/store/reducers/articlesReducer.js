@@ -31,7 +31,7 @@ const articlesReducer = handleActions(
       return { ...state, articles };
     },
     [actions.deleteArticleSuccess](state, { payload: { slug } }) {
-      const articles = state.srticles.filter(article => article.slug !== slug);
+      const articles = state.articles.filter(article => article.slug !== slug);
       return { ...state, articles };
     },
     [actions.articlesSuccess](state, { payload: { articles, articlesCount } }) {

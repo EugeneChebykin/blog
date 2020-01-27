@@ -39,7 +39,7 @@ export const getOneArticle = async slug => {
 };
 
 export const editArticle = async (slug, body) => {
-  const response = await api.put(`/articles/${slug}`, JSON.stringify({ article: body }));
+  const response = await api.put(`/articles/${slug}`, { article: body });
   const {
     data: { article },
   } = response;
@@ -47,7 +47,7 @@ export const editArticle = async (slug, body) => {
 };
 
 export const addArticle = async body => {
-  const response = await api.post('/articles', JSON.stringify({ article: body }));
+  const response = await api.post('/articles', { article: body });
   const {
     data: { article },
   } = response;
