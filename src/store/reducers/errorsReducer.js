@@ -18,7 +18,7 @@ const errorsReducer = handleActions(
     [actions.addArticleFailure](state, { payload, payload: { errors } }) {
       return errors || payload;
     },
-    [actions.deleteArticleSuccess](state, { payload, payload: { errors } }) {
+    [actions.deleteArticleFailure](state, { payload, payload: { errors } }) {
       return errors || payload;
     },
   },

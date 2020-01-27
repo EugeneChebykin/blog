@@ -42,12 +42,6 @@ const Routes = () => {
             <Redirect to="/home" />
           </Route>
           <ConditionalRoute
-            path="/home"
-            component={Home}
-            pathToRedirect="/login"
-            conditionFunc={() => loggedIn}
-          />
-          <ConditionalRoute
             path="/add"
             component={ArticleAdd}
             pathToRedirect="/login"
@@ -59,6 +53,7 @@ const Routes = () => {
             pathToRedirect="/login"
             conditionFunc={() => loggedIn}
           />
+          <Route path="/home" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
           <Route exact path="/articles/:slug" component={Article} />

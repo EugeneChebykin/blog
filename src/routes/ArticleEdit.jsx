@@ -121,7 +121,7 @@ const ArticleEdit = ({ match }) => {
                           type="primary"
                           onClick={() => push(inputTagRef.current.state.value)}
                         >
-                          Add tag
+                          Добавить тег
                         </Button>
                       </div>
                     );
@@ -135,7 +135,7 @@ const ArticleEdit = ({ match }) => {
                   htmlType="submit"
                   disabled={isSubmitting}
                 >
-                  Save changes
+                  Сохранить изменения
                 </Button>
               </Form.Item>
 

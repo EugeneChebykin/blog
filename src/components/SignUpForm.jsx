@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { isEmpty } from 'lodash';
 import { Form, Input, Icon, Button, Alert } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { registrAction } from '../store/actions';
+import * as actions from '../store/actions';
 
 const validationSchema = Yup.object().shape({
   username: Yup.string()
@@ -32,7 +32,7 @@ const SignUpForm = () => {
       validationSchema={validationSchema}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         setSubmitting(true);
-        dispatch(registrAction(values));
+        dispatch(actions.registrAction(values));
         setSubmitting(false);
         resetForm();
       }}

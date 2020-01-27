@@ -1,22 +1,18 @@
 import axios from 'axios';
-
-const { token } = JSON.parse(localStorage.getItem('user')) || {};
-const AuthorizationHeader = token ? { Authorization: `Token ${token}` } : {};
+import { authHeader } from '../functions';
 
 const api = axios.create({
   baseURL: 'https://conduit.productionready.io/api/',
-  headers: { ...AuthorizationHeader, 'Content-type': 'application/json' },
+  headers: authHeader(),
 });
 
 export const login = async user => {
-  const body = JSON.stringify({ user });
-  const response = await api.post('/users/login', body);
+  const response = await api.post('/users/login', { user });
   localStorage.setItem('user', JSON.stringify(response.data.user));
   return response.data.user;
 };
 export const registration = async user => {
-  const body = JSON.stringify({ user });
-  const response = await api.post('/users', body);
+  const response = await api.post('/users', { user });
   return response.data.user;
 };
 

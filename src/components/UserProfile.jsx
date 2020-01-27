@@ -13,6 +13,7 @@ const UserProfile = () => {
     user: state.user.user,
   }));
   const dispatch = useDispatch();
+
   return (
     <Card
       hoverable

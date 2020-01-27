@@ -5,7 +5,7 @@ import { isEmpty } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Input, Icon, Button, Alert } from 'antd';
 import { Link } from 'react-router-dom';
-import { loginAction } from '../store/actions';
+import * as actions from '../store/actions';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -23,7 +23,7 @@ const LoginForm = () => {
       validationSchema={validationSchema}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         setSubmitting(true);
-        dispatch(loginAction(values));
+        dispatch(actions.loginAction(values));
         setSubmitting(false);
         resetForm();
       }}

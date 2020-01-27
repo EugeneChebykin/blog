@@ -103,7 +103,7 @@ export const loginAction = user => async dispatch => {
   dispatch(loginRequest());
   try {
     const response = await API.login(user);
-    dispatch(loginSuccess({ user: response }));
+    dispatch(loginSuccess({ userData: response }));
     history.push('/home');
   } catch (err) {
     dispatch(loginFailure(err.response.data));
@@ -114,7 +114,7 @@ export const registrAction = user => async dispatch => {
   dispatch(registrRequest());
   try {
     const response = await API.registration(user);
-    dispatch(registrSuccess({ user: response }));
+    dispatch(registrSuccess({ userData: response }));
     history.push('/login');
   } catch (err) {
     dispatch(registrFailure(err.response.data));

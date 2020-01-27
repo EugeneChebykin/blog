@@ -112,7 +112,7 @@ const ArticleAdd = () => {
                           type="primary"
                           onClick={() => push(inputTagRef.current.state.value)}
                         >
-                          Add tag
+                          Добавить тег
                         </Button>
                       </div>
                     );
@@ -126,7 +126,7 @@ const ArticleAdd = () => {
                   htmlType="submit"
                   disabled={isSubmitting}
                 >
-                  Save changes
+                  Сохранить изменения
                 </Button>
               </Form.Item>
 

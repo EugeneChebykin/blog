@@ -9,4 +9,8 @@ export const paginate = (items, pageNumber, pageSize) => {
     .value();
 };
 
-export const asd = 0;
+export const authHeader = () => {
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  return user && user.token ? { Authorization: `Token ${user.token}` } : {};
+};
