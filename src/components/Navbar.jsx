@@ -10,7 +10,10 @@ const Navbar = props => {
   const dispatch = useDispatch();
   const { location } = props;
 
-  const handleLogoutClick = () => dispatch(actions.logout());
+  const handleLogoutClick = () => {
+    dispatch(actions.logout());
+    dispatch(actions.articlesAction({ limit: 10 }));
+  };
 
   return (
     <Menu

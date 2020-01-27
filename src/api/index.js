@@ -1,10 +1,19 @@
 import axios from 'axios';
-import { authHeader } from '../functions';
 
 const api = axios.create({
   baseURL: 'https://conduit.productionready.io/api/',
-  headers: authHeader(),
 });
+
+api.interceptors.request.use(
+  request => {
+    const { token } = JSON.parse(localStorage.getItem('user')) || {};
+    if (token) {
+      request.headers.Authorization = `Token ${token}`;
+    }
+    return request;
+  },
+  err => Promise.reject(err)
+);
 
 export const login = async user => {
   const response = await api.post('/users/login', { user });
