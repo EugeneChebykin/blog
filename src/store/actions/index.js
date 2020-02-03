@@ -113,9 +113,9 @@ export const loginAction = user => async dispatch => {
 export const registrAction = user => async dispatch => {
   dispatch(registrRequest());
   try {
-    const response = await API.registration(user);
-    dispatch(registrSuccess({ userData: response }));
-    history.push('/login');
+    await API.registration(user);
+    const { email, password } = user;
+    dispatch(loginAction({ email, password }));
   } catch (err) {
     dispatch(registrFailure(err.response.data));
   }

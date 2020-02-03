@@ -26,15 +26,17 @@ const validationSchema = Yup.object().shape({
 const SignUpForm = () => {
   const { errors: errorsApi } = useSelector(state => state);
   const dispatch = useDispatch();
+  const readableErrors = Object.keys(errorsApi).reduce((acc, cur) => {
+    return `${acc}\n${cur}: ${errorsApi[cur].join(',')}`;
+  }, '');
   return (
     <Formik
       initialValues={{ username: '', email: '', password: '' }}
       validationSchema={validationSchema}
-      onSubmit={(values, { setSubmitting, resetForm }) => {
+      onSubmit={(values, { setSubmitting }) => {
         setSubmitting(true);
         dispatch(actions.registrAction(values));
         setSubmitting(false);
-        resetForm();
       }}
     >
       {({ values, errors, touched, isSubmitting, handleChange, handleBlur, handleSubmit }) => (
@@ -91,9 +93,7 @@ const SignUpForm = () => {
               Sign up
             </Button>
           </Form.Item>
-          {!isEmpty(errorsApi) && (
-            <Alert type="error" message={JSON.stringify(errorsApi, null, 2)} />
-          )}
+          {!isEmpty(errorsApi) && <Alert type="error" message={readableErrors} />}
         </Form>
       )}
     </Formik>

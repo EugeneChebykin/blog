@@ -30,13 +30,15 @@ const Home = () => {
       {loggedIn && <UserProfile />}
       <div style={{ flexGrow: '1' }}>
         <ArticlesList />
-        <Pagination
-          style={{ marginTop: '30px' }}
-          current={currentPage}
-          total={articlesCount}
-          pageSize={pageSize}
-          onChange={handlePageChange}
-        />
+        {articlesCount > pageSize && (
+          <Pagination
+            style={{ marginTop: '30px' }}
+            current={currentPage}
+            total={articlesCount}
+            pageSize={pageSize}
+            onChange={handlePageChange}
+          />
+        )}
       </div>
     </div>
   );

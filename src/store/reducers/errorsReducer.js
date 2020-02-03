@@ -6,6 +6,9 @@ const errorsReducer = handleActions(
     [actions.loginSuccess]() {
       return '';
     },
+    [actions.registrSuccess]() {
+      return '';
+    },
     [actions.loginFailure](state, { payload: { errors } }) {
       return errors;
     },
